@@ -21,6 +21,12 @@ yarn add sass-loader -D
 yarn add node-sass -D
 yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 
+API Github: 
+- https://api.github.com/orgs/rocketseat/repos
+- https://api.github.com/users/pahique
+- https://api.github.com/users/pahique/repos
+
+
 
 
 
