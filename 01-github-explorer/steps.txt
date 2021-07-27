@@ -26,6 +26,10 @@ API Github:
 - https://api.github.com/users/pahique
 - https://api.github.com/users/pahique/repos
 
+yarn add typescript -D
+yarn tsc --init
+yarn add @babel/preset-typescript -D
+
 
 
 
