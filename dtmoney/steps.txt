@@ -1,2 +1,3 @@
 yarn create react-app dtmoney --template typescript
+yarn add @types/styled-components -D
 
