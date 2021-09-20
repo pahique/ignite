@@ -3,4 +3,5 @@ yarn add typescript @types/react @types/node -D
 yarn add stripe
 yarn add next-auth
 yarn add @types/next-auth -D
+yarn add faunadb
 
