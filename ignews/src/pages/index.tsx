@@ -4,6 +4,9 @@ import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 import styles from './home.module.scss';
 
+// Client-side
+// Server-side
+// Static Site Generation
 interface HomeProps {
   product: {
     priceId: string;
