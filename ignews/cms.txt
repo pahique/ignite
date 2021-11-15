@@ -1,0 +1,27 @@
+* CMS:
+
+- Wordpress (tem API, gratuito)
+x Drupal
+x Joomla
+x Magento (e-Commerce)
+
+
+* Headless CMS (tendência) -> tem painel de administração + API HTTP, GraphQL, SDK:
+
+Gratuitos
+
+- Strapi (bem genérico, bom para projetos pequenos)
+- Ghost (melhor para Blog)
+- Keystone (genérico)
+
+Pagos (suporte)
+
+- GraphCMS 
+- Prismic CMS  (precificação é um pouco melhor do que os outros)
+- Contentful  (aplicações mais enterprise, para quando tem dinheiro)
+
+eCommerce
+
+- Shopify  (antigo, sólido)
+- Saleor  (promissor)
+
