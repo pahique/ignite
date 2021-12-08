@@ -10,3 +10,9 @@ brew install stripe/stripe-cli/stripe
 stripe login
 stripe listen --forward-to http://localhost:3000/api/webhooks
 
+yarn add @prismicio/client prismic-reactjs next-slicezone
+yarn add prismic-dom
+yarn add @types/prismic-dom -D
+
+
+
