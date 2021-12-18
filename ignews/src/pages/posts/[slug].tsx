@@ -1,8 +1,9 @@
 import React from 'react';
 import { getSession } from 'next-auth/client';
-import { getPrismicClient } from '../../services/prismic';
 import { RichText } from 'prismic-dom';
 import Head from 'next/head';
+import { Client } from '../../utils/prismicHelpers';
+import Prismic from '@prismicio/client';
 
 interface PostsProps {
     post: {
@@ -35,8 +36,7 @@ export const getServerSideProps = async({req, params}) => {
     const {slug} = params;
     // if (!session) {
     // }
-    const prismic = getPrismicClient();
-    const response = await prismic.getByUID('post', String(slug), {}); 
+    const response = await Client().getByUID('post', String(slug), {});
     const post = {
         slug,
         title: RichText.asText(response.data.title),
