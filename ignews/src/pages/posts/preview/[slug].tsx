@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Client } from '../../../utils/prismicHelpers';
 import styles from '../post.module.scss';
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { useSession } from 'next-auth/client';
 import { useRouter } from 'next/router';
 
@@ -70,13 +70,23 @@ export const getStaticProps: GetStaticProps = async({params}) => {
     return { 
         props: {
             post
-        }
+        },
+        redirect: 60 * 30, // 30 minutes (recarrega 1x a cada 30 minutos)
     }
 }
 
-export const getStaticPaths = () => {
+// Quais paths eu quero gerar durante a build
+// Vazio (cada post é carregado somente quando o primeiro usuario acessa)
+export const getStaticPaths: GetStaticPaths = async () => {
     return {
-        paths: [],
-        fallback: 'blocking'
+        paths: [{
+            params: {
+                slug: 'lorem-ipsum'
+            }
+        }],
+        fallback: 'blocking'   
+        // true: se ainda não foi gerado, abre a tela sem conteúdo, faz a requisição e espera montar a tela
+        // false: se o post não foi gerado de forma estática ainda, retorna 404, usado quando você já gerou tudo
+        // blocking: se ainda não foi gerado, carrega usando o server-side rendering, e só mostra a tela quando estiver completo
     }
 }
